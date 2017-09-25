@@ -15,6 +15,12 @@ buildscript {
             name 'jboss-nexus'
             url "http://repository.jboss.org/nexus/content/groups/public/"
         }
+
+        maven {
+            name 'third-party'
+            url 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/'
+        }
+
         jcenter()
     }
     dependencies {
