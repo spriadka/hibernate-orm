@@ -144,3 +144,14 @@ tasks."matrix_mariadb" {
         println "Starting test: " + descriptor
     }
 }
+
+pitest {
+    jvmArgs = ['-Xmx500g']
+    pitestVersion = '1.2.4'
+    verbose = true
+    dependencyDistance = 0
+    enableDefaultIncrementalAnalysis = true
+    excludedClasses = ['net.*','org.hibernate.boot.registry.classloading.*']
+    historyInputLocation = '/home/spriadka/Documents/School/hibernate-orm/pitHistory.txt'
+    threads = 40
+}
