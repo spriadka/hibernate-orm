@@ -244,13 +244,13 @@ test {
 }
 
 pitest {
-    jvmArgs = ['-Xmx6g']
+    jvmArgs = ['-Xmx500g']
     pitestVersion = '1.2.4'
     verbose = true
-    targetTests = ['org.hibernate.test.criteria.*']
-    excludedClasses = ['org.hibernate.boot.registry.classloading.*', 'org.hibernate.test.ternary.Employee', 'org.hibernate.test.ternary.Site']
     dependencyDistance = 0
+    enableDefaultIncrementalAnalysis = true
+    excludedClasses = ['net.*','org.hibernate.boot.registry.classloading.*']
     historyInputLocation = '/home/spriadka/Documents/School/hibernate-orm/pitHistory.txt'
-    threads = 8
+    threads = 40
 }
 
