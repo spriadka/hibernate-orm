@@ -145,3 +145,12 @@ tasks."matrix_mariadb" {
         println "Starting test: " + descriptor
     }
 }
+
+pitest {
+    jvmArgs = ['-Xmx500g']
+    pitestVersion = '1.2.4'
+    verbose = true
+    dependencyDistance = 0
+    excludedClasses = ['net.*','org.hibernate.boot.registry.classloading.*']
+    threads = 40
+}
